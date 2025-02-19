@@ -2,7 +2,6 @@
     "profiles": [
         {
             "name": "Default profile",
-            "selected": true,
             "virtual_hid_keyboard": { "keyboard_type_v2": "ansi" }
         },
         {
@@ -162,6 +161,7 @@
                 }
             ],
             "name": "Magnus",
+            "selected": true,
             "simple_modifications": [
                 {
                     "from": { "apple_vendor_top_case_key_code": "keyboard_fn" },
