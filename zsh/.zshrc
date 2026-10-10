@@ -53,6 +53,7 @@ export PATH="$PATH:$HOME/go/bin:$HOME/.local/bin"
 # --- Tools (each only if installed) -----------------------------------------
 has mise  && eval "$(mise activate zsh)"
 has try   && eval "$(try init)"
+has zoxide && eval "$(zoxide init zsh)"
 
 [[ -f $HOME/.config/broot/launcher/bash/br ]] && source $HOME/.config/broot/launcher/bash/br
 

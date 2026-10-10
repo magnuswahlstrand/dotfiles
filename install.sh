@@ -43,6 +43,10 @@ done
 stow --restow "${packages[@]}"
 echo "Linked: ${packages[*]}"
 
+if [[ $(basename "${SHELL:-}") != zsh ]]; then
+  echo "Login shell is ${SHELL:-unknown}, not zsh. Run: chsh -s \$(which zsh)"
+fi
+
 for cmd in nvim fd zoxide direnv autojump mise; do
   command -v "$cmd" >/dev/null || echo "Optional, not installed: $cmd"
 done
