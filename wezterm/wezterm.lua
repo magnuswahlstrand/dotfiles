@@ -6,7 +6,10 @@ return {
 	font_size = 13.0,
 
 	enable_tab_bar = false,
-	window_decorations = "RESIZE",
+
+	window_decorations = "TITLE | RESIZE",
+	native_macos_fullscreen_mode = false,
+
 	window_padding = {
 		left = 2,
 		right = 2,
