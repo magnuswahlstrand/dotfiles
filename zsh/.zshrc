@@ -81,7 +81,8 @@ alias branches="git reflog show --pretty=format:'%gs ~ %gd' --date=relative | gr
 alias branches_names="git reflog show --pretty=format:'%gs ~ %gd' --date=relative | grep 'checkout' | awk '!seen[\$6]++{print \$6}' | head -n 30 | fzf --reverse"
 alias gcl='git checkout $(branches_names)'
 
-gwt() {
+unalias gwt 2>/dev/null  # oh-my-zsh git plugin defines gwt=git worktree
+function gwt() {
   local dir
   dir=$(git worktree list | awk '{print $1}' | fzf) || return
   cd "$dir"
